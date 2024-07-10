@@ -14,8 +14,8 @@ with DAG(
     # params={"example_key": "example_value"},
 ) as dag:
     t1_orange = BashOperator(
-        task_id="/opt/airflow/plugins/select_fruit.sh ORANGE",
-        bash_command="",
+        task_id="t1_orange",
+        bash_command="/opt/airflow/plugins/select_fruit.sh ORANGE",
     )
     
     t2_avocado = BashOperator(
